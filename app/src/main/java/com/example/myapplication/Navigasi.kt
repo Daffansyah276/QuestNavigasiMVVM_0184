@@ -45,3 +45,12 @@ fun DataApp(
         }
     }
 }
+
+private fun cancelAndBackToFormulaSaya(
+    navController: NavHostController
+) {
+    navController.popBackStack(
+        Navigasi.FormulirSaya.name,
+        inclusive = false
+    )
+}
