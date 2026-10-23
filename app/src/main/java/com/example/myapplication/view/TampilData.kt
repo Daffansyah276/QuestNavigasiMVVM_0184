@@ -42,5 +42,19 @@ fun TampilData(
         Pair(stringResource(R.string.jenis_kelamin), "lainnya"),
         Pair(stringResource(R.string.alamat), "Yogyakarta")
     )
+    Scaffold (modifier = Modifier,
+        {
+            TopAppBar(
+                title = {Text(text = stringResource(id=R.string.tampil), color = Color.White)},
+                colors = TopAppBarDefaults.mediumTopAppBarColors(colorResource(R.color.teal_700))
+            )
+        }){isiRuang->
+        Column(modifier = Modifier.padding(isiRuang),
+            verticalArrangement = Arrangement.SpaceBetween) {
+            Column(modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
+                verticalArrangement = Arrangement.spacedBy (dimensionResource(R.dimen.padding_small)))
+                }
+            }
+        }
     }
 }
